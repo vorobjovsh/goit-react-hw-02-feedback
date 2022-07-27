@@ -12,7 +12,11 @@ class App extends Component {
 
 
     return (
-      <div>React template test</div>
+      <>
+        <div>React template test</div>
+        <div>Hello</div>
+      </>
+
     );
   }
 }
