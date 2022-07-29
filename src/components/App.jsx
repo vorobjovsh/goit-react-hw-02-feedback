@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import Section from './Section/Section';
 
 
 class App extends Component {
@@ -50,11 +51,14 @@ class App extends Component {
 
     return (
       <>
-        <FeedbackOptions optionGood={this.addGood} optionNeutral={this.addNeutral} optionBad={this.addBad}></FeedbackOptions>
+        <Section title="Please leave feedback">
+          <FeedbackOptions optionGood={this.addGood} optionNeutral={this.addNeutral} optionBad={this.addBad}></FeedbackOptions>
+        </Section>
 
-        <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={posit}></Statistics>
+        <Section title="Statistics">
+          <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={posit}></Statistics>
+        </Section>
       </>
-
     );
   }
 }

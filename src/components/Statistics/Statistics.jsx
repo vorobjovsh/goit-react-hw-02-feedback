@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 function Statistics ({good, neutral, bad, total, positivePercentage}) {
   return (
     <>
-      <h2>Statistics</h2>
       <p>Good: <span>{good}</span></p>
       <p>Neutral: <span>{neutral}</span></p>
       <p>Bad: <span>{bad}</span></p>
