@@ -3,6 +3,11 @@
   margin-right: 15px;
 }
 
+.feed:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+
 .feedLast {
   margin-right: 0;
 }
