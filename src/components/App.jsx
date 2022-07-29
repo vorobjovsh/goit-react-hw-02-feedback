@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Statistics from './Statistics/Statistics';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 
 
 class App extends Component {
@@ -48,19 +50,9 @@ class App extends Component {
 
     return (
       <>
-        <h2>Please leave feedback</h2>
-        <div>
-          <button className='feed' onClick={this.addGood}>Good</button>
-          <button className='feed' onClick={this.addNeutral}>Neutral</button>
-          <button className='feed feed--last' onClick={this.addBad}>Bad</button>
-        </div>
+        <FeedbackOptions optionGood={this.addGood} optionNeutral={this.addNeutral} optionBad={this.addBad}></FeedbackOptions>
 
-        <h2>Statistics</h2>
-        <p>Good: <span>{good}</span></p>
-        <p>Neutral: <span>{neutral}</span></p>
-        <p>Bad: <span>{bad}</span></p>
-        <p>Total: <span>{total}</span></p>
-        <p>Positive feedback: <span>{posit}%</span></p>
+        <Statistics good={good} neutral={neutral} bad={bad} total={total} positivePercentage={posit}></Statistics>
       </>
 
     );
