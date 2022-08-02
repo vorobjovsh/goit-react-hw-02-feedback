@@ -3,6 +3,10 @@
   margin-right: 15px;
 }
 
+.feed::first-letter {
+  text-transform: uppercase;
+}
+
 .feed:hover {
   cursor: pointer;
   background-color: blue;
